@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Better Nature — Fitness & Food Tracker | UX/UI Case Study</title>
+  <meta name="description"
+    content="A personalised nutrition tracking app built for the Better Nature tempeh brand, helping users monitor calories, macros, and health goals while discovering plant-based products.">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/styles/font.css">
+  <link rel="stylesheet" href="./assets/styles/home.css">
+
+  <style>
+    /* ── CURSOR ── */
+    #gp-cursor {
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      background: #4C1D95;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 99999;
+      top: 0;
+      left: 0;
+      will-change: transform;
+    }
+
+    #gp-cursor-ring {
+      position: fixed;
+      width: 30px;
+      height: 30px;
+      border: 1.5px solid rgba(76, 29, 149, 0.45);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 99998;
+      top: 0;
+      left: 0;
+      will-change: transform;
+    }
+
+    body {
+      cursor: none;
+    }
+
+    a,
+    button {
+      cursor: none;
+    }
+
+    /* ── SCROLL PROGRESS ── */
+    #gp-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: #4C1D95;
+      z-index: 99997;
+      transform-origin: left;
+    }
+
+    /* ── HERO CHAR CLIP ── */
+    .hero-title .char-wrap {
+      display: inline-block;
+      overflow: hidden;
+      vertical-align: top;
+      line-height: 1;
+    }
+
+    .hero-title .char {
+      display: inline-block;
+    }
+
+    /* ── WORK ITEM LINE REVEAL ── */
+    .work-item {
+      overflow: visible;
+    }
+
+    .work-item::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 0%;
+      height: 1px;
+      background: #1a56ff;
+      z-index: 2;
+      transition: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Scroll progress bar -->
+  <div id="gp-progress"></div>
+
+  <!-- Custom cursor -->
+  <div id="gp-cursor"></div>
+  <div id="gp-cursor-ring"></div>
+
+  <div class="main">
+    <header class="topbar">
+      <a href="/" class="logo">
+        <h2>GEORGIA PAYE</h2>
+      </a>
+      <div class="descriptor">
+        <span>UX/UI Designer</span>
+        <span>iOS Mobile App</span>
+      </div>
+
+      <div class="descriptor">
+        <span>Nutrition Tracking</span>
+        <span>Better Nature Brand</span>
+      </div>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <div>
+          <a href="./index.html#works">Works</a>
+          <a href="./skills-background.html">Skills</a>
+        </div>
+        <div>
+          <a href="./index.html#about">About</a>
+          <a href="./index.html#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1 class="hero-title" id="heroTitle">Georgia</h1>
+    </section>
+
+    <!-- WORKS -->
+    <section class="works-section" id="works">
+      <div class="section-label">WORKS</div>
+      <ul class="works-list">
+
+        <!-- Better Nature -->
+        <li class="work-item">
+          <span class="work-num">01</span>
+          <a href="./better-nature.html" class="work-title">Better Nature</a>
+          <div class="work-badge">
+            <div class="work-badge-inner badge-african">Better<br>Nature</div>
+          </div>
+          <div class="work-photo">
+            <div class="work-photo-placeholder photo-african">
+              <img src="./assets/images/Page_2_project_1/ECG00116.JPG" alt="">
+            </div>
+          </div>
+        </li>
+
+        <!-- 02 Liberian Hearthrobe -->
+        <li class="work-item">
+          <span class="work-num">02</span>
+          <a href="./liberian-hearthrobe.html" class="work-title">Liberian Hearthrobe</a>
+          <div class="work-badge">
+            <div class="work-badge-inner badge-liberian">LIBERIAN<br>HEARTHROBE</div>
+          </div>
+          <div class="work-photo">
+            <div class="work-photo-placeholder photo-liberian">
+              <img src="./assets/images/Project_2_page_3/IMG_4090.JPG" alt="">
+            </div>
+          </div>
+        </li>
+
+        <!-- 03 Hair Series -->
+        <li class="work-item">
+          <span class="work-num">03</span>
+          <a href="./hair-series.html" class="work-title">Hair Series</a>
+          <div class="work-badge">
+            <div class="work-badge-inner badge-hair">HAIR<br>SERIES</div>
+          </div>
+          <div class="work-photo">
+            <div class="work-photo-placeholder photo-hair">
+              <img src="./assets/images/Project_3_page_4/image00014.JPEG" alt="">
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
+      <div>
+        <div class="about-label">ABOUT</div>
+        <div class="about-name">Georgia<br>Paye</div>
+        <div class="photo-placeholder"><img src="./assets/images/Page_1/IMG_0411.JPG" alt=""></div>
+      </div>
+
+      <div>
+        <div class="col-heading">BIO</div>
+        <div class="bio-col">
+          <p>A creative director with a passion for bridging creativity and culture. As a first generation Liberian
+            American, her heritage is deeply woven into her work, shaping her perspective and inspiring her creative
+            approach.</p>
+          <p>She takes pride in showcasing cultural narratives with authenticity, confidence, and a strong sense of
+            identity. Her goal is to infuse every project with the same pride and appreciation that she has for where
+            she
+            comes from — creating work that resonates, empowers, and leaves a lasting impact.</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="col-heading">WORKS</div>
+        <div class="bio-col">
+          <div style="font-style:italic; margin-bottom:4px;">01</div>
+          <a href="./better-nature.html">Better Nature</a>
+          <div style="font-style:italic; margin-top:14px; margin-bottom:4px;">02</div>
+          <a href="./liberian-hearthrobe.html">Liberian Hearthrobe</a>
+          <div style="font-style:italic; margin-top:14px; margin-bottom:4px;">03</div>
+          <a href="./hair-series.html">Hair Series</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="col-heading">APPROACH</div>
+        <div class="bio-col">
+          Culture-first.<br>
+          Authenticity always.<br>
+          Identity as design.<br><br>
+          Work that resonates,<br>
+          empowers, and<br>
+          leaves a lasting impact.
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+      <div class="contact-label">CONTACT</div>
+      <ul class="contact-list">
+        <li>
+          <span class="contact-platform">Mail</span>
+          <span class="contact-handle">
+            <a href="mailto:payegeorgia@gmail.com">payegeorgia@gmail.com</a>
+          </span>
+        </li>
+        <li>
+          <span class="contact-platform">Instagram</span>
+          <span class="contact-handle">
+            <a href="https://www.instagram.com/georgiapaye_/" target="_blank">georgiapaye_</a>
+          </span>
+        </li>
+        <li>
+          <span class="contact-platform">Linkedin</span>
+          <span class="contact-handle">
+            <a href="https://www.linkedin.com/in/georgia-paye-884654280?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+              target="_blank">Georgia Paye</a>
+          </span>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="site-footer">
+      georgiapaye.com
+    </footer>
+  </div>
+
+  <!-- ── GSAP ── -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    /* ─────────────────────────────────────────
+       CUSTOM CURSOR
+    ───────────────────────────────────────── */
+    const cursor = document.getElementById('gp-cursor');
+    const cursorRing = document.getElementById('gp-cursor-ring');
+    let mx = window.innerWidth / 2, my = window.innerHeight / 2;
+
+    gsap.set(cursor, { xPercent: -50, yPercent: -50 });
+    gsap.set(cursorRing, { xPercent: -50, yPercent: -50 });
+
+    window.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      gsap.to(cursor, { x: mx, y: my, duration: 0.08, ease: 'none' });
+      gsap.to(cursorRing, { x: mx, y: my, duration: 0.38, ease: 'power2.out' });
+    });
+
+    /* Cursor states */
+    const interactives = document.querySelectorAll('a, button');
+    interactives.forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        gsap.to(cursor, { scale: 2.2, backgroundColor: '#1a56ff', duration: 0.25 });
+        gsap.to(cursorRing, { scale: 1.8, borderColor: 'rgba(26,86,255,0.5)', duration: 0.25 });
+      });
+      el.addEventListener('mouseleave', () => {
+        gsap.to(cursor, { scale: 1, backgroundColor: '#4C1D95', duration: 0.25 });
+        gsap.to(cursorRing, { scale: 1, borderColor: 'rgba(76,29,149,0.45)', duration: 0.25 });
+      });
+    });
+
+    /* Cursor disappear when leaving window */
+    document.addEventListener('mouseleave', () => {
+      gsap.to([cursor, cursorRing], { opacity: 0, duration: 0.2 });
+    });
+    document.addEventListener('mouseenter', () => {
+      gsap.to([cursor, cursorRing], { opacity: 1, duration: 0.2 });
+    });
+
+    /* ─────────────────────────────────────────
+       SCROLL PROGRESS BAR
+    ───────────────────────────────────────── */
+    const progressBar = document.getElementById('gp-progress');
+    ScrollTrigger.create({
+      trigger: document.body,
+      start: 'top top',
+      end: 'bottom bottom',
+      onUpdate: self => {
+        gsap.set(progressBar, { width: (self.progress * 100) + '%' });
+      }
+    });
+
+    /* ─────────────────────────────────────────
+       HERO — CHARACTER SPLIT REVEAL
+    ───────────────────────────────────────── */
+    const heroEl = document.getElementById('heroTitle');
+    const heroText = heroEl.textContent.trim();
+    heroEl.textContent = '';
+
+    const charEls = heroText.split('').map(ch => {
+      const wrap = document.createElement('span');
+      wrap.className = 'char-wrap';
+      const inner = document.createElement('span');
+      inner.className = 'char';
+      inner.textContent = ch;
+      wrap.appendChild(inner);
+      heroEl.appendChild(wrap);
+      return inner;
+    });
+
+    /* ─────────────────────────────────────────
+       LOAD TIMELINE
+    ───────────────────────────────────────── */
+    const loadTL = gsap.timeline({ defaults: { ease: 'power4.out' } });
+
+    gsap.set('.topbar', { y: -24, opacity: 0 });
+    gsap.set(charEls, { y: '108%' });
+
+    loadTL
+      .to('.topbar', { y: 0, opacity: 1, duration: 0.9 })
+      .to(charEls, {
+        y: '0%',
+        duration: 1.05,
+        stagger: 0.055,
+        ease: 'expo.out'
+      }, '-=0.55')
+      /* section label fades in after hero */
+      .from('.section-label', {
+        opacity: 0,
+        y: 18,
+        duration: 0.6,
+        ease: 'power3.out'
+      }, '-=0.3');
+
+    /* ─────────────────────────────────────────
+       HERO PARALLAX ON SCROLL
+    ───────────────────────────────────────── */
+    gsap.to(heroEl, {
+      scrollTrigger: {
+        trigger: '.hero',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 1.2
+      },
+      y: 80,
+      opacity: 0.25,
+      ease: 'none'
+    });
+
+    /* ─────────────────────────────────────────
+       WORKS — STAGGER SLIDE UP
+    ───────────────────────────────────────── */
+    const workItems = gsap.utils.toArray('.work-item');
+    workItems.forEach((item, i) => {
+      gsap.from(item, {
+        scrollTrigger: {
+          trigger: item,
+          start: 'top 88%',
+          toggleActions: 'play none none none'
+        },
+        y: 55,
+        opacity: 0,
+        duration: 0.75,
+        delay: i * 0.08,
+        ease: 'power3.out'
+      });
+
+      /* Blue underline sweep on hover via GSAP */
+      item.addEventListener('mouseenter', () => {
+        gsap.to(item, { '--line-w': '100%', duration: 0 }); /* fallback */
+        gsap.fromTo(item.querySelector('.work-title'),
+          { backgroundSize: '0% 2px' },
+          { backgroundSize: '100% 2px', duration: 0.35, ease: 'power2.out' }
+        );
+      });
+    });
+
+    /* ─────────────────────────────────────────
+       ABOUT SECTION — COLUMNS STAGGER
+    ───────────────────────────────────────── */
+    const aboutCols = gsap.utils.toArray('.about-section > div');
+    aboutCols.forEach((col, i) => {
+      gsap.from(col, {
+        scrollTrigger: {
+          trigger: '.about-section',
+          start: 'top 78%',
+          toggleActions: 'play none none none'
+        },
+        y: 60,
+        opacity: 0,
+        duration: 0.85,
+        delay: i * 0.14,
+        ease: 'power3.out'
+      });
+    });
+
+    /* About photo — scale reveal */
+    gsap.from('.photo-placeholder', {
+      scrollTrigger: {
+        trigger: '.photo-placeholder',
+        start: 'top 82%'
+      },
+      scale: 0.88,
+      opacity: 0,
+      duration: 0.9,
+      ease: 'power3.out'
+    });
+
+    /* ─────────────────────────────────────────
+       CONTACT ITEMS — STAGGER REVEAL
+    ───────────────────────────────────────── */
+    const contactLabel = document.querySelector('.contact-label');
+    gsap.from(contactLabel, {
+      scrollTrigger: {
+        trigger: '.contact-section',
+        start: 'top 88%'
+      },
+      opacity: 0,
+      x: -16,
+      duration: 0.5,
+      ease: 'power2.out'
+    });
+
+    gsap.utils.toArray('.contact-list li').forEach((li, i) => {
+      gsap.from(li, {
+        scrollTrigger: {
+          trigger: li,
+          start: 'top 92%'
+        },
+        y: 44,
+        opacity: 0,
+        duration: 0.7,
+        delay: i * 0.12,
+        ease: 'power3.out'
+      });
+
+      /* Hover: platform text color sweep */
+      const platform = li.querySelector('.contact-platform');
+      li.addEventListener('mouseenter', () => {
+        gsap.to(platform, { color: '#1a56ff', duration: 0.22, ease: 'power2.out' });
+        gsap.to(platform, { x: 6, duration: 0.22, ease: 'power2.out' });
+      });
+      li.addEventListener('mouseleave', () => {
+        gsap.to(platform, { color: '#000', duration: 0.22, ease: 'power2.inOut' });
+        gsap.to(platform, { x: 0, duration: 0.22, ease: 'power2.inOut' });
+      });
+    });
+
+    /* ─────────────────────────────────────────
+       FOOTER
+    ───────────────────────────────────────── */
+    gsap.from('.site-footer', {
+      scrollTrigger: {
+        trigger: '.site-footer',
+        start: 'top 97%'
+      },
+      opacity: 0,
+      y: 16,
+      duration: 0.55,
+      ease: 'power2.out'
+    });
+
+    /* ─────────────────────────────────────────
+       WORK ITEM — MAGNETIC HOVER ON TITLE
+       Subtle magnetic pull toward cursor
+    ───────────────────────────────────────── */
+    workItems.forEach(item => {
+      const title = item.querySelector('.work-title');
+      item.addEventListener('mousemove', e => {
+        const rect = title.getBoundingClientRect();
+        const cx = rect.left + rect.width / 2;
+        const cy = rect.top + rect.height / 2;
+        const dx = (e.clientX - cx) * 0.12;
+        const dy = (e.clientY - cy) * 0.22;
+        gsap.to(title, { x: dx, y: dy, duration: 0.35, ease: 'power2.out' });
+      });
+      item.addEventListener('mouseleave', () => {
+        gsap.to(title, { x: 0, y: 0, duration: 0.55, ease: 'elastic.out(1, 0.5)' });
+      });
+    });
+
+    /* ─────────────────────────────────────────
+       SECTION LABEL — TYPEWRITER FEEL
+       Each character of "WORKS" / "ABOUT" etc.
+       reveals on scroll
+    ───────────────────────────────────────── */
+    gsap.utils.toArray('.col-heading').forEach(heading => {
+      gsap.from(heading, {
+        scrollTrigger: {
+          trigger: heading,
+          start: 'top 88%'
+        },
+        opacity: 0,
+        x: -10,
+        duration: 0.45,
+        ease: 'power2.out'
+      });
+    });
+
+  </script>
+</body>
+
+</html>
