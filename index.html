@@ -4,265 +4,189 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Better Nature — Fitness & Food Tracker | UX/UI Case Study</title>
-  <meta name="description"
-    content="A personalised nutrition tracking app built for the Better Nature tempeh brand, helping users monitor calories, macros, and health goals while discovering plant-based products.">
-
+  <title>Teefig | UX/UI Designer Portfolio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="./assets/styles/font.css">
   <link rel="stylesheet" href="./assets/styles/home.css">
-
-  <style>
-    /* ── CURSOR ── */
-    #gp-cursor {
-      position: fixed;
-      width: 8px;
-      height: 8px;
-      background: #4C1D95;
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 99999;
-      top: 0;
-      left: 0;
-      will-change: transform;
-    }
-
-    #gp-cursor-ring {
-      position: fixed;
-      width: 30px;
-      height: 30px;
-      border: 1.5px solid rgba(76, 29, 149, 0.45);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 99998;
-      top: 0;
-      left: 0;
-      will-change: transform;
-    }
-
-    body {
-      cursor: none;
-    }
-
-    a,
-    button {
-      cursor: none;
-    }
-
-    /* ── SCROLL PROGRESS ── */
-    #gp-progress {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 0%;
-      height: 2px;
-      background: #4C1D95;
-      z-index: 99997;
-      transform-origin: left;
-    }
-
-    /* ── HERO CHAR CLIP ── */
-    .hero-title .char-wrap {
-      display: inline-block;
-      overflow: hidden;
-      vertical-align: top;
-      line-height: 1;
-    }
-
-    .hero-title .char {
-      display: inline-block;
-    }
-
-    /* ── WORK ITEM LINE REVEAL ── */
-    .work-item {
-      overflow: visible;
-    }
-
-    .work-item::after {
-      content: '';
-      position: absolute;
-      bottom: -1px;
-      left: 0;
-      width: 0%;
-      height: 1px;
-      background: #1a56ff;
-      z-index: 2;
-      transition: none;
-    }
-  </style>
 </head>
 
 <body>
-
-  <!-- Scroll progress bar -->
-  <div id="gp-progress"></div>
-
-  <!-- Custom cursor -->
-  <div id="gp-cursor"></div>
-  <div id="gp-cursor-ring"></div>
-
   <div class="main">
     <header class="topbar">
       <a href="/" class="logo">
-        <h2>Tee Figs</h2>
+        <h2>TEEFFIG</h2>
       </a>
+
       <div class="descriptor">
+        <span>Trivon Scott</span>
         <span>UX/UI Designer</span>
-        <span>iOS Mobile App</span>
       </div>
 
       <div class="descriptor">
-        <span>Nutrition Tracking</span>
-        <span>Better Nature Brand</span>
+        <span>Mobile App Design</span>
+        <span>Digital Experiences</span>
       </div>
 
-      <nav class="nav" aria-label="Primary navigation">
+      <nav class="nav">
         <div>
+          <a href="/">Home</a>
           <a href="./index.html#works">Works</a>
-          <a href="./skills-background.html">Skills</a>
         </div>
         <div>
-          <a href="./index.html#about">About</a>
+          <a href="./about.html">About</a>
           <a href="./index.html#contact">Contact</a>
         </div>
       </nav>
     </header>
 
-    <!-- HERO -->
     <section class="hero">
-      <h1 class="hero-title" id="heroTitle">Teefigs</h1>
+      <h1 class="hero-title" id="heroTitle">Teefig</h1>
     </section>
 
-    <!-- WORKS -->
     <section class="works-section" id="works">
       <div class="section-label">WORKS</div>
-      <ul class="works-list">
 
-        <!-- Better Nature -->
+      <ul class="works-list">
         <li class="work-item">
           <span class="work-num">01</span>
           <a href="./better-nature.html" class="work-title">Better Nature</a>
+
           <div class="work-badge">
-            <div class="work-badge-inner badge-african">Better<br>Nature</div>
+            <div class="work-badge-inner badge-african">NEXT<br>WAVE</div>
           </div>
+
           <div class="work-photo">
             <div class="work-photo-placeholder photo-african">
-              <img src="./assets/images/Page_2_project_1/ECG00116.JPG" alt="">
+              <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=900&auto=format&fit=crop"
+                alt="">
             </div>
           </div>
         </li>
 
-        <!-- 02 Liberian Hearthrobe -->
         <li class="work-item">
           <span class="work-num">02</span>
-          <a href="./liberian-hearthrobe.html" class="work-title">Liberian Hearthrobe</a>
+          <a href="./nextwave.html" class="work-title">NextWave</a>
+
           <div class="work-badge">
-            <div class="work-badge-inner badge-liberian">LIBERIAN<br>HEARTHROBE</div>
+            <div class="work-badge-inner badge-liberian">PRODUCT<br>CONCEPT</div>
           </div>
+
           <div class="work-photo">
             <div class="work-photo-placeholder photo-liberian">
-              <img src="./assets/images/Project_2_page_3/IMG_4090.JPG" alt="">
+              <img src="./assets/images/next-wave/next-wave-main-2.jpg" alt="">
             </div>
           </div>
         </li>
 
-        <!-- 03 Hair Series -->
         <li class="work-item">
           <span class="work-num">03</span>
-          <a href="./hair-series.html" class="work-title">Hair Series</a>
+          <a href="./beautifly-web.html" class="work-title">Beautifly</a>
+
           <div class="work-badge">
-            <div class="work-badge-inner badge-hair">HAIR<br>SERIES</div>
+            <div class="work-badge-inner badge-hair">BEAUTI<br>FLY</div>
           </div>
+
           <div class="work-photo">
             <div class="work-photo-placeholder photo-hair">
-              <img src="./assets/images/Project_3_page_4/image00014.JPEG" alt="">
+              <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=900&auto=format&fit=crop"
+                alt="">
             </div>
           </div>
         </li>
-
       </ul>
     </section>
 
-    <!-- ABOUT -->
     <section class="about-section" id="about">
       <div>
         <div class="about-label">ABOUT</div>
-        <div class="about-name">Tee<br>Figs</div>
-        <div class="photo-placeholder"><img src="./assets/images/Page_1/IMG_0411.JPG" alt=""></div>
+        <div class="about-name">Trivon<br>Scott</div>
+
+        <div class="photo-placeholder">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=700&auto=format&fit=crop"
+            alt="">
+        </div>
       </div>
 
       <div>
         <div class="col-heading">BIO</div>
+
         <div class="bio-col">
-          <p>A creative director with a passion for bridging creativity and culture. As a first generation Liberian
-            American, her heritage is deeply woven into her work, shaping her perspective and inspiring her creative
-            approach.</p>
-          <p>She takes pride in showcasing cultural narratives with authenticity, confidence, and a strong sense of
-            identity. Her goal is to infuse every project with the same pride and appreciation that she has for where
-            she
-            comes from — creating work that resonates, empowers, and leaves a lasting impact.</p>
+          <p>
+            UX/UI designer focused on creating digital experiences that are intuitive,
+            purposeful and visually considered.
+          </p>
+
+          <p>
+            Focused on mobile apps, product interfaces and thoughtful digital systems
+            that solve real problems for real people.
+          </p>
         </div>
       </div>
 
       <div>
         <div class="col-heading">WORKS</div>
+
         <div class="bio-col">
           <div style="font-style:italic; margin-bottom:4px;">01</div>
-          <a href="./better-nature.html">Better Nature</a>
+          <a href="./nextwave.html">NextWave</a>
+
           <div style="font-style:italic; margin-top:14px; margin-bottom:4px;">02</div>
-          <a href="./liberian-hearthrobe.html">Liberian Hearthrobe</a>
+          <a href="./product-concept.html">Product Concept</a>
+
           <div style="font-style:italic; margin-top:14px; margin-bottom:4px;">03</div>
-          <a href="./hair-series.html">Hair Series</a>
+          <a href="./beautifly.html">Beautifly</a>
         </div>
       </div>
 
       <div>
         <div class="col-heading">APPROACH</div>
+
         <div class="bio-col">
-          Culture-first.<br>
-          Authenticity always.<br>
-          Identity as design.<br><br>
-          Work that resonates,<br>
-          empowers, and<br>
-          leaves a lasting impact.
+          Human-first design.<br>
+          Clear interfaces.<br>
+          Product thinking.<br><br>
+
+          Useful digital products.<br>
+          Thoughtful systems.<br>
+          Experiences with intent.
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section class="contact-section" id="contact">
       <div class="contact-label">CONTACT</div>
+
       <ul class="contact-list">
         <li>
           <span class="contact-platform">Mail</span>
           <span class="contact-handle">
-            <a href="#">teefigs@gmail.com</a>
+            <a href="mailto:trivonscott16@gmail.com">trivonscott16@gmail.com</a>
           </span>
         </li>
+
         <li>
           <span class="contact-platform">Instagram</span>
           <span class="contact-handle">
-            <a href="#" target="_blank">teefig_</a>
+            <a href="#" target="_blank">@teefig</a>
           </span>
         </li>
+
         <li>
           <span class="contact-platform">Linkedin</span>
           <span class="contact-handle">
-            <a href="#"
-              target="_blank">Tee Figs</a>
+            <a href="#" target="_blank">Trivon Scott</a>
           </span>
         </li>
       </ul>
     </section>
 
     <footer class="site-footer">
-      teefigs.com
+      teefig.com
     </footer>
   </div>
 

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Better Nature — Fitness & Food Tracker</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/styles/better-nature.css">
+</head>
+
+<body id="top">
+    <main class="project-page">
+
+        <header class="topbar">
+            <a href="/" class="logo">
+                <h2>TEEFFIG</h2>
+            </a>
+
+            <div class="descriptor">
+                <span>Trivon Scott</span>
+                <span>UX/UI Designer</span>
+            </div>
+
+            <div class="descriptor">
+                <span>Mobile App Design</span>
+                <span>Digital Experiences</span>
+            </div>
+
+            <nav class="nav">
+                <div>
+                    <a href="/">Home</a>
+                    <a href="./index.html#works">Works</a>
+                </div>
+                <div>
+                    <a href="./about.html">About</a>
+                    <a href="./index.html#contact">Contact</a>
+                </div>
+            </nav>
+        </header>
+
+        <section class="case-hero">
+            <div class="tag-pill">Mobile App · UX/UI Design</div>
+
+            <h1>Better Nature — Fitness & Food Tracker</h1>
+
+            <p class="case-subtitle">
+                A personalised nutrition tracking app built for the Better Nature tempeh brand,
+                helping users monitor calories, macros, and health goals while discovering
+                plant-based products.
+            </p>
+
+            <div class="case-meta">
+                <p>Role: <strong>UX/UI Designer</strong></p>
+                <p>Platform: <strong>iOS Mobile App</strong></p>
+                <p>Brand: <strong>Better Nature</strong></p>
+            </div>
+        </section>
+
+        <section class="project-showcase">
+            <div class="phones-wrap">
+                <div class="phone-frame small">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=900&auto=format&fit=crop"
+                        alt="">
+                </div>
+
+                <div class="phone-frame large">
+                    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=900&auto=format&fit=crop"
+                        alt="">
+                </div>
+
+                <div class="phone-frame small">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=900&auto=format&fit=crop"
+                        alt="">
+                </div>
+            </div>
+
+            <aside class="case-info">
+                <div class="info-block">
+                    <h2>Overview</h2>
+                    <p>
+                        Designed end-to-end from onboarding to core app screens, creating a cohesive
+                        experience around Better Nature's brand identity. The app combines food
+                        logging with product discovery and personalised goal tracking.
+                    </p>
+                </div>
+
+                <div class="info-block">
+                    <h2>Key Features</h2>
+                    <ul>
+                        <li>6-step personalised onboarding flow with goal setting</li>
+                        <li>Daily macro & nutrient tracking with visual progress bars</li>
+                        <li>Weekly calendar view with stacked macro charts</li>
+                        <li>Integrated product shop tied to nutritional data</li>
+                        <li>Food log with quick-add and meal copying</li>
+                        <li>Weight tracking and exercise logging</li>
+                    </ul>
+                </div>
+
+                <div class="info-block">
+                    <h2>Tools & Stack</h2>
+                    <div class="tool-grid">
+                        <span>Figma</span>
+                        <span>iOS design system</span>
+                        <span>Prototyping</span>
+                        <span>User flows</span>
+                        <span>Brand design</span>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <section class="app-screens">
+            <h2>App Screens</h2>
+
+            <div class="screens-grid">
+
+                <figure>
+                    <div class="phone-thumb">
+                        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=700&auto=format&fit=crop"
+                            alt="">
+                    </div>
+                    <figcaption>Nutrition Dashboard</figcaption>
+                </figure>
+
+
+                <figure>
+                    <div class="phone-thumb">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=700&auto=format&fit=crop"
+                            alt="">
+                    </div>
+                    <figcaption>Meal Tracking</figcaption>
+                </figure>
+
+
+                <figure>
+                    <div class="phone-thumb">
+                        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=700&auto=format&fit=crop"
+                            alt="">
+                    </div>
+                    <figcaption>Fitness Goals</figcaption>
+                </figure>
+
+
+                <figure>
+                    <div class="phone-thumb">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=700&auto=format&fit=crop"
+                            alt="">
+                    </div>
+                    <figcaption>Healthy Recipes</figcaption>
+                </figure>
+
+            </div>
+        </section>
+
+        <footer class="footer">
+            <a href="#top">trivonscott16@gmail.com</a>
+            <button type="button" class="back-top" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
+        </footer>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        window.addEventListener("load", () => {
+
+            gsap.from(".topbar", {
+                y: -30,
+                opacity: 0,
+                duration: 0.8,
+                ease: "power3.out"
+            });
+
+            gsap.from(".tag-pill", {
+                y: 25,
+                opacity: 0,
+                duration: 0.7,
+                delay: 0.15,
+                ease: "power3.out"
+            });
+
+            gsap.from(".case-hero h1", {
+                y: 60,
+                opacity: 0,
+                duration: 1,
+                delay: 0.25,
+                ease: "power4.out"
+            });
+
+            gsap.from(".case-subtitle", {
+                y: 35,
+                opacity: 0,
+                duration: 0.8,
+                delay: 0.45,
+                ease: "power3.out"
+            });
+
+            gsap.from(".case-meta p", {
+                y: 25,
+                opacity: 0,
+                duration: 0.7,
+                stagger: 0.12,
+                delay: 0.65,
+                ease: "power3.out"
+            });
+
+            gsap.from(".phone-frame", {
+                scrollTrigger: {
+                    trigger: ".project-showcase",
+                    start: "top 75%",
+                },
+                y: 120,
+                opacity: 0,
+                scale: 0.9,
+                duration: 1.1,
+                stagger: 0.15,
+                ease: "power4.out"
+            });
+
+            gsap.to(".phone-frame.small:first-child", {
+                scrollTrigger: {
+                    trigger: ".project-showcase",
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: 1
+                },
+                y: -45,
+            });
+
+            gsap.to(".phone-frame.large", {
+                scrollTrigger: {
+                    trigger: ".project-showcase",
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: 1
+                },
+                y: 35,
+            });
+
+            gsap.to(".phone-frame.small:last-child", {
+                scrollTrigger: {
+                    trigger: ".project-showcase",
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: 1
+                },
+                y: -35,
+            });
+
+            gsap.from(".info-block", {
+                scrollTrigger: {
+                    trigger: ".case-info",
+                    start: "top 80%",
+                },
+                x: 60,
+                opacity: 0,
+                duration: 0.9,
+                stagger: 0.18,
+                ease: "power3.out"
+            });
+
+            gsap.from(".info-block li", {
+                scrollTrigger: {
+                    trigger: ".info-block ul",
+                    start: "top 85%",
+                },
+                x: 25,
+                opacity: 0,
+                duration: 0.55,
+                stagger: 0.08,
+                ease: "power2.out"
+            });
+
+            gsap.from(".tool-grid span", {
+                scrollTrigger: {
+                    trigger: ".tool-grid",
+                    start: "top 85%",
+                },
+                y: 25,
+                opacity: 0,
+                duration: 0.55,
+                stagger: 0.08,
+                ease: "power2.out"
+            });
+
+            gsap.from(".screens-grid figure", {
+                scrollTrigger: {
+                    trigger: ".app-screens",
+                    start: "top 75%",
+                },
+                y: 90,
+                opacity: 0,
+                scale: 0.92,
+                duration: 0.9,
+                stagger: 0.12,
+                ease: "power4.out"
+            });
+
+            gsap.to(".phone-thumb img", {
+                scrollTrigger: {
+                    trigger: ".app-screens",
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: 1
+                },
+            });
+
+        });
+    </script>
+</body>
+
+</html>
