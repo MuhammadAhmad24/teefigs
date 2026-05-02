@@ -56,13 +56,9 @@
           <span class="work-num">01</span>
           <a href="./better-nature.html" class="work-title">Better Nature</a>
 
-          <div class="work-badge">
-            <div class="work-badge-inner badge-african">NEXT<br>WAVE</div>
-          </div>
-
           <div class="work-photo">
             <div class="work-photo-placeholder photo-african">
-              <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=900&auto=format&fit=crop"
+              <img src="./assets/images/betternature/quality_restoration_20260309111932426-2.png"
                 alt="">
             </div>
           </div>
@@ -71,10 +67,6 @@
         <li class="work-item">
           <span class="work-num">02</span>
           <a href="./nextwave.html" class="work-title">NextWave</a>
-
-          <div class="work-badge">
-            <div class="work-badge-inner badge-liberian">PRODUCT<br>CONCEPT</div>
-          </div>
 
           <div class="work-photo">
             <div class="work-photo-placeholder photo-liberian">
@@ -87,13 +79,9 @@
           <span class="work-num">03</span>
           <a href="./beautifly-web.html" class="work-title">Beautifly</a>
 
-          <div class="work-badge">
-            <div class="work-badge-inner badge-hair">BEAUTI<br>FLY</div>
-          </div>
-
           <div class="work-photo">
             <div class="work-photo-placeholder photo-hair">
-              <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=900&auto=format&fit=crop"
+              <img src="./assets/images/wedding-filmographers-web.jpg"
                 alt="">
             </div>
           </div>
@@ -175,6 +163,7 @@
     <footer class="site-footer">
       trivonscott.com
     </footer>
+
   </div>
 
   <!-- ── GSAP ── -->
@@ -183,56 +172,6 @@
 
   <script>
     gsap.registerPlugin(ScrollTrigger);
-
-    /* ─────────────────────────────────────────
-       CUSTOM CURSOR
-    ───────────────────────────────────────── */
-    const cursor = document.getElementById('gp-cursor');
-    const cursorRing = document.getElementById('gp-cursor-ring');
-    let mx = window.innerWidth / 2, my = window.innerHeight / 2;
-
-    gsap.set(cursor, { xPercent: -50, yPercent: -50 });
-    gsap.set(cursorRing, { xPercent: -50, yPercent: -50 });
-
-    window.addEventListener('mousemove', e => {
-      mx = e.clientX; my = e.clientY;
-      gsap.to(cursor, { x: mx, y: my, duration: 0.08, ease: 'none' });
-      gsap.to(cursorRing, { x: mx, y: my, duration: 0.38, ease: 'power2.out' });
-    });
-
-    /* Cursor states */
-    const interactives = document.querySelectorAll('a, button');
-    interactives.forEach(el => {
-      el.addEventListener('mouseenter', () => {
-        gsap.to(cursor, { scale: 2.2, backgroundColor: '#1a56ff', duration: 0.25 });
-        gsap.to(cursorRing, { scale: 1.8, borderColor: 'rgba(26,86,255,0.5)', duration: 0.25 });
-      });
-      el.addEventListener('mouseleave', () => {
-        gsap.to(cursor, { scale: 1, backgroundColor: '#4C1D95', duration: 0.25 });
-        gsap.to(cursorRing, { scale: 1, borderColor: 'rgba(76,29,149,0.45)', duration: 0.25 });
-      });
-    });
-
-    /* Cursor disappear when leaving window */
-    document.addEventListener('mouseleave', () => {
-      gsap.to([cursor, cursorRing], { opacity: 0, duration: 0.2 });
-    });
-    document.addEventListener('mouseenter', () => {
-      gsap.to([cursor, cursorRing], { opacity: 1, duration: 0.2 });
-    });
-
-    /* ─────────────────────────────────────────
-       SCROLL PROGRESS BAR
-    ───────────────────────────────────────── */
-    const progressBar = document.getElementById('gp-progress');
-    ScrollTrigger.create({
-      trigger: document.body,
-      start: 'top top',
-      end: 'bottom bottom',
-      onUpdate: self => {
-        gsap.set(progressBar, { width: (self.progress * 100) + '%' });
-      }
-    });
 
     /* ─────────────────────────────────────────
        HERO — CHARACTER SPLIT REVEAL
